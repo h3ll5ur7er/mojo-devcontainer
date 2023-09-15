@@ -1,0 +1,24 @@
+{
+	"name": "Mojo",
+	"build": { 
+		"context": "..",
+		"dockerfile": "Dockerfile"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"modular-mojotools.vscode-mojo",
+				"ms-python.python",
+				"github.copilot"
+			],
+			"settings": {
+				"terminal.integrated.shell.linux": "/bin/bash",
+				"python.defaultInterpreterPath": "/usr/bin/python3.10",
+				"python.languageServer": "Pylance"
+			}
+		}
+	},
+	"remoteUser": "mojo",
+	"postCreateCommand": "mojo --version && python3 --version && bash"
+
+}
