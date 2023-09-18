@@ -2,7 +2,10 @@
 	"name": "Mojo",
 	"build": { 
 		"context": "..",
-		"dockerfile": "Dockerfile"
+		"dockerfile": "Dockerfile",
+		"args": {
+			"MODULAR_AUTH": "<your-modular-auth-token>"
+		}
 	},
 	"customizations": {
 		"vscode": {
